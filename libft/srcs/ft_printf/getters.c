@@ -6,11 +6,11 @@
 /*   By: baderwae <baderwae@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 13:53:38 by baderwae          #+#    #+#             */
-/*   Updated: 2025/10/26 09:44:52 by baderwae         ###   ########.fr       */
+/*   Updated: 2025/11/05 07:54:27 by baderwae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 char	*ft_get_int(int n, t_wildcard *wild)
 {

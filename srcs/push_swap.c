@@ -21,7 +21,7 @@ void	ft_nrotate_back(t_stack *stack, int size, int lesser_size, int n)
 	{
 		while (i < size - lesser_size)
 		{
-			ft_reverse_rotate(stack);
+			ft_rotate(stack);
 			i++;
 		}
 	}
@@ -29,7 +29,7 @@ void	ft_nrotate_back(t_stack *stack, int size, int lesser_size, int n)
 	{
 		while (i < n)
 		{
-			ft_rotate(stack);
+			ft_reverse_rotate(stack);
 			i++;
 		}
 	}
@@ -55,7 +55,7 @@ void	ft_lstsplit(t_stack *from, t_stack *to, int size)
 		else
 		{
 			rotate_count++;
-			ft_reverse_rotate(from);
+			ft_rotate(from);
 		}
 		i++;
 	}

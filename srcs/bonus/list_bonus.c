@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_bonus.c                                      :+:      :+:    :+:   */
+/*   list_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baderwae <baderwae@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 06:41:27 by baderwae          #+#    #+#             */
-/*   Updated: 2025/08/15 06:41:27 by baderwae         ###   ########.fr       */
+/*   Updated: 2025/11/05 08:13:59 by baderwae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,18 +66,4 @@ t_list	*ft_lstpop_back(t_list **list)
 		*list = NULL;
 	popped->next = NULL;
 	return (popped);
-}
-
-int	ft_c_in_str(char c, char *str)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
 }

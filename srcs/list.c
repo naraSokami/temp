@@ -55,7 +55,7 @@ void	ft_lstput_on_top(int index, t_stack *stack, int size)
 	{
 		while (i < ft_abs(index - size))
 		{
-			ft_rotate(stack);
+			ft_reverse_rotate(stack);
 			i++;
 		}
 	}
@@ -63,7 +63,7 @@ void	ft_lstput_on_top(int index, t_stack *stack, int size)
 	{
 		while (i < index)
 		{
-			ft_reverse_rotate(stack);
+			ft_rotate(stack);
 			i++;
 		}
 	}

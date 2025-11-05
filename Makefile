@@ -1,5 +1,5 @@
 CC := gcc
-FLAGS := -Wall -Wextra -Werror -no-pie -D PRINT
+FLAGS := -Wall -Wextra -Werror -no-pie #-D PRINT
 # compile with -D PRINT to see visuals
 
 NAME := push_swap
@@ -51,12 +51,12 @@ $(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR)
 
 $(OBJS): $(OBJS_DIR)%.o: $(SRCS_DIR)%.c $(INCS)
-	mkdir -p $(OBJS_DIR)
+	@mkdir -p $(OBJS_DIR)
 	$(CC) $(FLAGS) -c $< -o $@ -I$(INCS_DIR) -I$(LIBFT_DIR)/incs
 
 $(BONUS_OBJS): $(OBJS_DIR)%.o: $(SRCS_DIR)%.c $(INCS)
-	mkdir -p $(OBJS_DIR)
-	mkdir -p $(OBJS_DIR)/bonus
+	@mkdir -p $(OBJS_DIR)
+	@mkdir -p $(OBJS_DIR)/bonus
 	$(CC) $(FLAGS) -c $< -o $@ -I$(INCS_DIR)/bonus -I$(LIBFT_DIR)/incs
 
 clean:

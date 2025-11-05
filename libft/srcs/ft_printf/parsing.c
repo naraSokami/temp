@@ -6,11 +6,11 @@
 /*   By: baderwae <baderwae@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 14:10:49 by baderwae          #+#    #+#             */
-/*   Updated: 2025/08/08 14:10:49 by baderwae         ###   ########.fr       */
+/*   Updated: 2025/11/05 07:54:39 by baderwae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_c_in_str(char c, char *str)
 {

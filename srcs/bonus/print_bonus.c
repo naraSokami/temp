@@ -6,7 +6,7 @@
 /*   By: baderwae <baderwae@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 15:45:45 by baderwae          #+#    #+#             */
-/*   Updated: 2025/11/04 12:51:47 by baderwae         ###   ########.fr       */
+/*   Updated: 2025/11/05 08:16:16 by baderwae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ void	ft_print_stacks(t_list *a, t_list *b, int size)
 	while (i < size)
 	{
 		if (a)
-			printf("%3d  ", ft_value(a));
+			ft_printf("%3d  ", ft_value(a));
 		else
 			ft_putstr_fd("     ", 1);
 		ft_putstr_fd("|", 1);
 		if (b)
-			printf("%3d\n", ft_value(b));
+			ft_printf("%3d\n", ft_value(b));
 		else
 			ft_putstr_fd("     \n", 1);
 		if (a)
@@ -54,12 +54,11 @@ void	ft_update_stacks(t_stack *a, t_stack *b, int size, int is_first)
 	}
 	a_elem = a->list;
 	b_elem = b->list;
-	//if (!is_first)
-	//	printf("\033[%dA", size + 5);
+	if (!is_first)
+		ft_printf("\033[%dA", size + 5);
 	ft_print_stacks(a_elem, b_elem, size);
-	//printf("\ninstruction:\n    ");
-	//printf("\033[4D");
-	(void)is_first;
+	ft_printf("\ninstruction:\n    ");
+	ft_printf("\033[4D");
 }
 #else
 

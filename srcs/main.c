@@ -41,8 +41,6 @@ int	main(int ac, char **av)
 	int		*tab;
 	int		size;
 
-	ft_printf("this is a test %c\n", 'a');
-
 	if (ac < 2)
 		return (ON_ESS);
 	tab = ft_strs_to_tab(ac - 1, av + 1);

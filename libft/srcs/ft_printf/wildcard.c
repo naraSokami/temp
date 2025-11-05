@@ -6,11 +6,11 @@
 /*   By: baderwae <baderwae@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 14:13:31 by baderwae          #+#    #+#             */
-/*   Updated: 2025/11/04 15:58:22 by baderwae         ###   ########.fr       */
+/*   Updated: 2025/11/05 08:04:45 by baderwae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	ft_init_wildcard(t_wildcard *wild)
 {
@@ -59,6 +59,7 @@ char	*ft_exec_wildcard(va_list *args, t_wildcard *wild)
 {
 	char	*print_value;
 
+	print_value = NULL;
 	if (wild->type == '%')
 		print_value = ft_strdup("%");
 	else if (wild->type == 'd' || wild->type == 'i')
@@ -71,5 +72,5 @@ char	*ft_exec_wildcard(va_list *args, t_wildcard *wild)
 		print_value = ft_get_str(va_arg(*args, char *), wild);
 	else if (wild->type == 'p')
 		print_value = ft_get_addr(va_arg(*args, void *));
-	return (NULL);
+	return (print_value);
 }

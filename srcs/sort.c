@@ -44,11 +44,11 @@ void	ft_full_little_sort(t_stack *stack, int size)
 	max = ft_lstfind_max(stack->list, size);
 	if ((stack->name == 'a' && ft_value(stack->list) == ft_value(max))
 		|| (stack->name == 'b' && ft_value(stack->list) == ft_value(min)))
-		ft_reverse_rotate(stack);
+		ft_rotate(stack);
 	else if ((stack->name == 'a'
 			&& ft_value(stack->list->next) == ft_value(max))
 		|| (stack->name == 'b' && ft_value(stack->list->next) == ft_value(min)))
-		ft_rotate(stack);
+		ft_reverse_rotate(stack);
 	if ((stack->name == 'a' && ft_value(stack->list) != ft_value(min))
 		|| (stack->name == 'b' && ft_value(stack->list) != ft_value(max)))
 		ft_swap(stack);
@@ -68,9 +68,9 @@ void	ft_sub_little_sort(t_stack *stack, int size)
 		if ((stack->name == 'a' && !ft_is_sorted(stack->list, size))
 			|| (stack->name == 'b' && !ft_is_reverse_sorted(stack->list, size)))
 		{
-			ft_reverse_rotate(stack);
-			ft_swap(stack);
 			ft_rotate(stack);
+			ft_swap(stack);
+			ft_reverse_rotate(stack);
 		}
 		if ((stack->name == 'a' && !ft_is_sorted(stack->list, size))
 			|| (stack->name == 'b' && !ft_is_reverse_sorted(stack->list, size)))

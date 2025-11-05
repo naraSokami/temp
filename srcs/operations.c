@@ -25,7 +25,7 @@ void	ft_rotate(t_stack *stack)
 	ft_printf("r%c\n", stack->name);
 	if (!stack || !stack->list)
 		return ;
-	ft_lstadd_front(&stack->list, ft_lstpop_back(&stack->list));
+	ft_lstadd_back(&stack->list, ft_lstpop_front(&stack->list));
 }
 
 void	ft_reverse_rotate(t_stack *stack)
@@ -33,7 +33,7 @@ void	ft_reverse_rotate(t_stack *stack)
 	ft_printf("rr%c\n", stack->name);
 	if (!stack || !stack->list)
 		return ;
-	ft_lstadd_back(&stack->list, ft_lstpop_front(&stack->list));
+	ft_lstadd_front(&stack->list, ft_lstpop_back(&stack->list));
 }
 
 void	ft_swap(t_stack *stack)
